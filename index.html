@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CBAL LLC — Community Technology Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a2332;
+    --paper: #f8f6f1;
+    --accent: #2b6c8a;
+    --accent-light: #e8f1f5;
+    --muted: #6b7a8d;
+    --border: #d4d0c8;
+    --white: #ffffff;
+    --max-w: 820px;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Header ── */
+  header {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 2rem 1.5rem;
+  }
+  header .inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+  }
+  .logo {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.25rem;
+  }
+  .tagline {
+    font-size: 0.95rem;
+    color: #9aabb8;
+    font-weight: 400;
+  }
+
+  /* ── Nav ── */
+  nav {
+    border-bottom: 1px solid var(--border);
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  nav .inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+    overflow-x: auto;
+  }
+  nav a {
+    display: block;
+    padding: 0.85rem 0;
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  nav a:hover, nav a:focus {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  /* ── Main content ── */
+  main {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+  section:target {
+    scroll-margin-top: 4rem;
+  }
+
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 1.5rem 0 0.5rem;
+    color: var(--ink);
+  }
+
+  p {
+    margin-bottom: 1rem;
+    color: #3a4a5c;
+  }
+
+  ul {
+    margin: 0 0 1rem 1.25rem;
+    color: #3a4a5c;
+  }
+  ul li {
+    margin-bottom: 0.4rem;
+  }
+
+  .card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .highlight {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    padding: 1rem 1.25rem;
+    border-radius: 0 6px 6px 0;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  @media (max-width: 560px) {
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+  .contact-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+  }
+  .contact-item .label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    margin-bottom: 0.25rem;
+  }
+
+  .effective-date {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ── Footer ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <div class="logo">CBAL LLC</div>
+    <div class="tagline">Community Technology Solutions &middot; Cape Coral, Florida</div>
+  </div>
+</header>
+
+<nav>
+  <div class="inner">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#sms-terms">SMS Terms</a>
+    <a href="#privacy">Privacy Policy</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ── About ── -->
+  <section id="about">
+    <h2>About CBAL LLC</h2>
+    <div class="card">
+      <p>CBAL LLC is a technology services company based in Cape Coral, Florida. We build and operate software solutions for community associations, property managers, and local organizations throughout Southwest Florida.</p>
+      <p>Our focus is on practical, privacy-first technology that helps communities operate more efficiently — from visitor management and parking systems to environmental monitoring and operational notifications.</p>
+    </div>
+  </section>
+
+  <!-- ── Services ── -->
+  <section id="services">
+    <h2>What We Do</h2>
+    <div class="card">
+      <h3>Community Operations &amp; Notifications</h3>
+      <p>We provide transactional SMS notification services for condominium and homeowner associations. These messages include visitor parking confirmations, community operational alerts, and time-sensitive notices that help residents and property managers stay informed.</p>
+
+      <h3>Visitor Management Systems</h3>
+      <p>Custom-built kiosk and check-in systems for gated communities and commercial properties, including visitor registration, badge printing, and automated notifications to hosts.</p>
+
+      <h3>Environmental Monitoring</h3>
+      <p>Water quality and environmental sensor networks for Southwest Florida communities and watershed organizations.</p>
+    </div>
+  </section>
+
+  <!-- ── SMS Terms ── -->
+  <section id="sms-terms">
+    <h2>SMS Messaging Terms of Service</h2>
+    <p class="effective-date">Effective: March 20, 2026</p>
+    <div class="card">
+      <h3>Program Description</h3>
+      <p>CBAL LLC sends transactional and informational SMS messages on behalf of community associations we serve. Messages may include visitor parking pass confirmations, community operational notices, and time-sensitive alerts related to association operations.</p>
+
+      <h3>Consent &amp; Opt-In</h3>
+      <p>You will only receive SMS messages from CBAL LLC if you have provided prior express consent. Consent is collected through written registration forms completed in person at the community association office. Consent is voluntary and is not a condition of residency, membership, or any purchase.</p>
+      <div class="highlight">
+        By providing your mobile phone number and checking the opt-in box on the registration form, you agree to receive transactional text messages from CBAL LLC related to community operations. Message frequency varies. Message and data rates may apply.
+      </div>
+
+      <h3>Opt-Out</h3>
+      <p>You may opt out of receiving text messages at any time by replying <strong>STOP</strong> to any message. You will receive a single confirmation message acknowledging your opt-out, and no further messages will be sent. Additional opt-out keywords accepted: STOPALL, UNSUBSCRIBE, CANCEL, END, QUIT.</p>
+
+      <h3>Help</h3>
+      <p>For assistance, reply <strong>HELP</strong> to any message, or contact us at the information listed in the Contact section below.</p>
+
+      <h3>Message Frequency</h3>
+      <p>Message frequency varies based on community activity. Typical recipients receive fewer than 10 messages per month. Messages are transactional only — we do not send marketing or promotional content.</p>
+
+      <h3>Supported Carriers</h3>
+      <p>Messages are sent via standard SMS and are compatible with all major US wireless carriers. Carriers are not responsible for delayed or undelivered messages.</p>
+
+      <h3>No Data Sharing</h3>
+      <p>We do not sell, share, or provide your phone number or opt-in information to third parties for marketing or promotional purposes. Information may be shared with service providers (such as our messaging platform) solely for the purpose of delivering messages on our behalf.</p>
+    </div>
+  </section>
+
+  <!-- ── Privacy Policy ── -->
+  <section id="privacy">
+    <h2>Privacy Policy</h2>
+    <p class="effective-date">Effective: March 20, 2026</p>
+    <div class="card">
+      <h3>Information We Collect</h3>
+      <p>In the course of providing our services, we may collect the following information from community residents and authorized users:</p>
+      <ul>
+        <li>Name, unit or address, and contact information (including mobile phone number)</li>
+        <li>Visitor and vehicle information submitted through our management systems</li>
+        <li>Service usage data necessary for system operation</li>
+      </ul>
+
+      <h3>How We Use Your Information</h3>
+      <p>Information is used solely for the purpose of providing the services described above, including sending transactional notifications, managing visitor access, and supporting community operations. We do not use personal information for marketing purposes.</p>
+
+      <h3>Data Sharing</h3>
+      <p>We do not sell or rent personal information to third parties. We may share information with:</p>
+      <ul>
+        <li>The community association you are a member of, for operational purposes</li>
+        <li>Service providers who assist in delivering our services (e.g., SMS delivery platforms), bound by contractual data protection obligations</li>
+        <li>Law enforcement, if required by law or legal process</li>
+      </ul>
+
+      <h3>Data Security</h3>
+      <p>We implement reasonable technical and organizational safeguards to protect your personal information against unauthorized access, alteration, or destruction.</p>
+
+      <h3>Data Retention</h3>
+      <p>We retain personal information only as long as necessary to provide our services or as required by law. You may request deletion of your information by contacting us.</p>
+
+      <h3>Your Rights</h3>
+      <p>You may request access to, correction of, or deletion of your personal information at any time by contacting us using the information below.</p>
+
+      <h3>Changes to This Policy</h3>
+      <p>We may update this privacy policy from time to time. Changes will be posted on this page with an updated effective date.</p>
+    </div>
+  </section>
+
+  <!-- ── Contact ── -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="label">Email</div>
+        <div>info@cbal.llc</div>
+      </div>
+      <div class="contact-item">
+        <div class="label">Location</div>
+        <div>Cape Coral, FL</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 CBAL LLC. All rights reserved. &middot; Cape Coral, Florida
+</footer>
+
+</body>
+</html>
